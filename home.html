@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<html data-theme="lofi">
+<html data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -19,69 +19,72 @@
 
 
 
-                    <div class="stats shadow">
+                    <div class="stats drop-shadow-lg mb-4">
                         <div class="stat">
 
-                            <div class="stat-value">89,400</div>
+                            <div id="total-amount" class="stat-value">9400</div>
                             <div class="stat-desc">Available Balance</div>
                         </div>
                     </div>
-                    <div class="divider"></div>
+                    <!-- <div class="divider"></div> -->
 
-                    <section class="second-class">
+                    <section class="second-class mb-4">
                         <div>
-                            <button class="btn btn-info bg-transparent">Add Money</button>
-                            <button class="btn btn-info bg-transparent">Cash Out</button>
+                            <button id="add" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg mr-2">Add Money</button>
+                            <button id="out" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg ml-2">Cash Out</button>
                         </div>
                     </section>
-                    <div class="divider"></div>
+                    <!-- <div class="divider"></div> -->
                     <section class="third-class">
-                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl">
+
+                        <div id="add-div" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden ">
                             <h1 class="text-xl p-5 pb-0">Add Money</h1>
-                        <form class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Amount</span>
-                                </label>
-                                <input type="text" placeholder="Amount" class="input input-bordered" required />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">PIN</span>
-                                </label>
-                                <input type="password" placeholder="PIN" class="input input-bordered" required />
-                               
-                            </div>
-                            <div class="form-control mt-6">
-                                <button class="btn btn-primary">Add Money</button>
-                            </div>
-                        </form>
-                    </div>
+                            <div class="divider"></div>
+                            <form class="card-body p-5 pt-0">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="add-money-field" type="text" placeholder="Amount" class="input input-bordered rounded-lg" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">PIN</span>
+                                    </label>
+                                    <input id="PIN-validation" type="password" placeholder="PIN" class="input input-bordered rounded-lg" required />
+
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="money-add" class="btn btn-primary rounded-lg text-white">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
                     </section>
-                    <div class="divider"></div>
+                    <!-- <div class="divider"></div> -->
                     <section class="fourth-class">
-                       
-                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl"> 
+
+                        <div id="out-div" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden">
                             <h1 class="text-xl  p-5 pb-0">Cash Out</h1>
-                        <form class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Amount</span>
-                                </label>
-                                <input type="text" placeholder="Amount" class="input input-bordered" required />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">PIN</span>
-                                </label>
-                                <input type="password" placeholder="PIN" class="input input-bordered" required />
-                               
-                            </div>
-                            <div class="form-control mt-6">
-                                <button class="btn btn-primary">Cash Out</button>
-                            </div>
-                        </form>
-                    </div>
+                            <div class="divider"></div>
+                            <form class="card-body p-5 pt-0">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="out-money-field" type="text" placeholder="Amount" class="input input-bordered rounded-lg" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">PIN</span>
+                                    </label>
+                                    <input id="PIN-validation2" type="password" placeholder="PIN" class="input input-bordered rounded-lg" required />
+
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="money-out" class="btn btn-primary text-white rounded-lg">Cash Out</button>
+                                </div>
+                            </form>
+                        </div>
                     </section>
 
 
@@ -89,6 +92,7 @@
             </div>
         </div>
     </main>
+    <script src="JS/home.js"></script>
 </body>
 
 </html>
