@@ -34,9 +34,15 @@ document
       ;
       const totalNumber = parseFloat(totalAmount);
       const addMoneyNumber = parseFloat(addMoneyAmount)
-    if (pinValidation === "5" && addMoneyAmount > 0) {
+    if (pinValidation === "5" && addMoneyAmount > 0 && !isNaN(addMoneyAmount)) {
       const sum = totalNumber + addMoneyNumber;
       document.getElementById("total-amount").innerText=sum
+
+      const history = document.createElement('p');
+      history.innerText=`Added $${addMoneyNumber}. New Balance $${sum}.`
+      history.classList.add('bg-green-300','p-1','pl-2','my-1.5','rounded-lg')
+      const historyContainer = document.getElementById("history-container");
+      historyContainer.append(history)
       
     } else {
       alert("wrong data");
@@ -59,15 +65,23 @@ document
         document.getElementById("total-amount").innerText
       ;
       const totalNumber = parseFloat(totalAmount);
-      const outMoneyNumber = parseFloat(outMoneyAmount)
+      const outMoneyNumber = parseFloat(outMoneyAmount);
     if (pinValidation === "5"  && outMoneyNumber <= totalNumber) {
       const sum = totalNumber - outMoneyNumber;
       document.getElementById("total-amount").innerText=sum
-      
-    } else {
+
+      const history = document.createElement('p');
+      history.innerText=`Withdraw $${outMoneyNumber}. New Balance $${sum}.`;
+      history.classList.add('bg-yellow-300','p-1','pl-2','my-1.5','rounded-lg');
+      const historyContainer = document.getElementById("history-container");
+      historyContainer.append(history);
+    } 
+    else {
       alert("wrong data");
     }
     document.getElementById("PIN-validation2").value = "";
     document.getElementById("out-money-field").value = "";
   });
+
+
 
