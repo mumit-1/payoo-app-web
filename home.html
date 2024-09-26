@@ -30,14 +30,18 @@
 
                     <section class="second-class mb-4">
                         <div>
-                            <button id="add" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg mr-2">Add Money</button>
-                            <button id="out" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg ml-2">Cash Out</button>
+                            <button id="add" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg mr-2">Add
+                                Money</button>
+                            <button id="out" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg ml-2">Cash
+                                Out</button>
+                            <button id="transaction-btn" class="btn btn-info bg-transparent rounded-lg drop-shadow-lg ml-2">Transaction</button>
                         </div>
                     </section>
                     <!-- <div class="divider"></div> -->
                     <section class="third-class">
 
-                        <div id="add-div" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden ">
+                        <div id="add-div"
+                            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden ">
                             <h1 class="text-xl p-5 pb-0">Add Money</h1>
                             <div class="divider"></div>
                             <form class="card-body p-5 pt-0">
@@ -45,17 +49,20 @@
                                     <label class="label">
                                         <span class="label-text">Amount</span>
                                     </label>
-                                    <input id="add-money-field" type="text" placeholder="Amount" class="input input-bordered rounded-lg" required />
+                                    <input id="add-money-field" type="text" placeholder="Amount"
+                                        class="input input-bordered rounded-lg" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">PIN</span>
                                     </label>
-                                    <input id="PIN-validation" type="password" placeholder="PIN" class="input input-bordered rounded-lg" required />
+                                    <input id="PIN-validation" type="password" placeholder="PIN"
+                                        class="input input-bordered rounded-lg" required />
 
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button id="money-add" class="btn btn-primary rounded-lg text-white">Add Money</button>
+                                    <button id="money-add" class="btn btn-primary rounded-lg text-white">Add
+                                        Money</button>
                                 </div>
                             </form>
                         </div>
@@ -63,7 +70,8 @@
                     <!-- <div class="divider"></div> -->
                     <section class="fourth-class">
 
-                        <div id="out-div" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden">
+                        <div id="out-div"
+                            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl hidden">
                             <h1 class="text-xl  p-5 pb-0">Cash Out</h1>
                             <div class="divider"></div>
                             <form class="card-body p-5 pt-0">
@@ -71,28 +79,48 @@
                                     <label class="label">
                                         <span class="label-text">Amount</span>
                                     </label>
-                                    <input id="out-money-field" type="text" placeholder="Amount" class="input input-bordered rounded-lg" required />
+                                    <input id="out-money-field" type="text" placeholder="Amount"
+                                        class="input input-bordered rounded-lg" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">PIN</span>
                                     </label>
-                                    <input id="PIN-validation2" type="password" placeholder="PIN" class="input input-bordered rounded-lg" required />
+                                    <input id="PIN-validation2" type="password" placeholder="PIN"
+                                        class="input input-bordered rounded-lg" required />
 
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button id="money-out" class="btn btn-primary text-white rounded-lg">Cash Out</button>
+                                    <button id="money-out" class="btn btn-primary text-white rounded-lg">Cash
+                                        Out</button>
                                 </div>
                             </form>
                         </div>
                     </section>
+                    <!-- transaction history -->
+                    <div id="transaction-div" tabindex="0" class="collapse p-4 w-[320px] mx-auto border-base-300 bg-base-200 border hidden">
+                        <div class="font-medium">
+                            <p class=" text-xl ">Transaction history</p>
+                            <div class="divider"></div>
+                            <div class="">
+                                <p>history 1</p>
+                                <p>history 1</p>
+                                <p>history 1</p>
+                                <p>history 1</p>
+                              </div>
+                        </div>
 
+                    </div>
 
                 </div>
             </div>
         </div>
+
+
+
     </main>
     <script src="JS/home.js"></script>
+    <script src="JS/function.js"></script>
 </body>
 
 </html>

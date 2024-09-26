@@ -1,14 +1,23 @@
 const displayX = document.getElementById("add-div");
 const displayY = document.getElementById("out-div");
-
+const displayZ =document.getElementById("transaction-div");
 document.getElementById("add").addEventListener("click", function () {
   displayY.classList.add("hidden");
+  displayZ.classList.add("hidden");
   displayX.classList.remove("hidden");
+  
 });
 document.getElementById("out").addEventListener("click", function () {
   displayX.classList.add("hidden");
+  displayZ.classList.add("hidden");
   displayY.classList.remove("hidden");
 });
+document.getElementById('transaction-btn')
+.addEventListener('click',function(){
+    displayX.classList.add("hidden");
+    displayZ.classList.remove("hidden");
+    displayY.classList.add("hidden"); 
+})
 
 
 //money-add
@@ -61,3 +70,4 @@ document
     document.getElementById("PIN-validation2").value = "";
     document.getElementById("out-money-field").value = "";
   });
+
